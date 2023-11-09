@@ -7,10 +7,21 @@ public class Grafo<TIPO> {
 
     private ArrayList<Vertice<TIPO>> vertices;
     private ArrayList<Aresta<TIPO>> arestas;
+    private double filtroPeso;
 
     public Grafo() {
+        setFiltroPeso(7.0);
         this.vertices = new ArrayList<Vertice<TIPO>>();
         this.arestas = new ArrayList<Aresta<TIPO>>();
+    }
+
+
+    public void setFiltroPeso(double filtroPeso) {
+        this.filtroPeso = filtroPeso;
+    }
+
+    public double getFiltroPeso() {
+        return filtroPeso;
     }
 
     public void adicionarVertice(TIPO dado) {
@@ -51,15 +62,19 @@ public class Grafo<TIPO> {
 
         while(fila.size() > 0){
             Vertice<TIPO> visitado = fila.get(0);
-            for (int i = 0; i < visitado.getArestaSaida().size(); i++) {
-                Vertice<TIPO> proximo = visitado.getArestaSaida().get(i).getFim();
-                if(!marcados.contains(proximo)){
-                    marcados.add(proximo);
-                    System.out.println(proximo.getDado());
-                    txtPane.setText(txtPane.getText() + proximo.getDado() + "\n");
-                    fila.add(proximo);
+
+                for (int i = 0; i < visitado.getArestaSaida().size(); i++) {
+                    Vertice<TIPO> proximo = visitado.getArestaSaida().get(i).getFim();
+                    Aresta<TIPO> aresta = visitado.getArestaSaida().get(i);
+
+                    if(!marcados.contains(proximo) && aresta.getPeso() >= filtroPeso){
+                        marcados.add(proximo);
+                        System.out.println(proximo.getDado());
+                        txtPane.setText(txtPane.getText() + proximo.getDado() + "\n");
+                        txtPane.setCaretPosition(txtPane.getDocument().getLength());
+                        fila.add(proximo);
+                    }
                 }
-            }
             fila.remove(0);
         }
     }
