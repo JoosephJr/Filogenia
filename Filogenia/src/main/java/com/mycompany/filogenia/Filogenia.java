@@ -2,10 +2,16 @@ package com.mycompany.filogenia;
 
 import com.mycompany.filogenia.grafo.Grafo;
 
-public class Filogenia {
+import javax.swing.*;
+
+
+public class Filogenia  {
 
     public static void main(String[] args) {
-        Grafo filogenia = new Grafo();
+
+        Grafo<String> filogenia = new Grafo<>();
+        //Grafo filogenia1 = new Grafo();
+
 
         filogenia.adicionarVertice("Sahelanthropus tchadensis");
         filogenia.adicionarVertice("Orrorin tugenensis");
@@ -69,9 +75,22 @@ public class Filogenia {
         filogenia.adicionarAresta(1.0, "Homo heidelbergensis", "Homo neanderthalensis");
         filogenia.adicionarAresta(1.0, "Homo heidelbergensis", "Homo sapiens");
 
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+
+                JFrame frame = new JFrame("Filogenia");
+
+                frame.setContentPane(new Tela(filogenia).panelMain);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setLocationRelativeTo(null);
+                frame.setVisible(true);
+            }
+        });
 
 
-        filogenia.BuscaEmLargura();
 
     }
+
 }

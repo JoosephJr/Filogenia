@@ -1,5 +1,6 @@
 package com.mycompany.filogenia.grafo;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
 public class Grafo<TIPO> {
@@ -37,13 +38,17 @@ public class Grafo<TIPO> {
         return vertice;
     }
 
-    public void BuscaEmLargura(){
+    public void BuscaEmLargura(JTextPane txtPane){
         ArrayList<Vertice<TIPO>> marcados = new ArrayList<Vertice<TIPO>>();
         ArrayList<Vertice<TIPO>> fila = new ArrayList<Vertice<TIPO>>();
         Vertice<TIPO> atual = this.vertices.get(0);
         marcados.add(atual);
+
+
         System.out.println(atual.getDado());
+        txtPane.setText(atual.getDado()+"\n");
         fila.add(atual);
+
         while(fila.size() > 0){
             Vertice<TIPO> visitado = fila.get(0);
             for (int i = 0; i < visitado.getArestaSaida().size(); i++) {
@@ -51,6 +56,7 @@ public class Grafo<TIPO> {
                 if(!marcados.contains(proximo)){
                     marcados.add(proximo);
                     System.out.println(proximo.getDado());
+                    txtPane.setText(txtPane.getText() + proximo.getDado() + "\n");
                     fila.add(proximo);
                 }
             }

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.mycompany.filogenia.Tela">
+  <grid id="27dc6" binding="panelMain" layout-manager="GridLayoutManager" row-count="13" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="71" y="42" width="625" height="573"/>
+    </constraints>
+    <properties>
+      <background color="-1326132"/>
+      <enabled value="true"/>
+      <font name="Arial" size="28" style="1"/>
+    </properties>
+    <border type="bevel-raised">
+      <color color="-16777216"/>
+    </border>
+    <children>
+      <component id="f68b9" class="javax.swing.JTextPane" binding="txtPane">
+        <constraints>
+          <grid row="2" column="4" row-span="10" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="1" use-parent-layout="false">
+            <preferred-size width="200" height="500"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+        </properties>
+      </component>
+      <component id="aa2b2" class="javax.swing.JLabel" binding="Teste">
+        <constraints>
+          <grid row="0" column="0" row-span="6" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="22" use-parent-layout="false">
+            <preferred-size width="95" height="17"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font size="20" style="1"/>
+          <foreground color="-14529774"/>
+          <text value="FILOGENIA"/>
+        </properties>
+      </component>
+      <component id="ff9cc" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="8" column="3" row-span="2" col-span="1" vsize-policy="3" hsize-policy="7" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <preferred-size width="0" height="196"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="39305" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="2" use-parent-layout="false">
+            <preferred-size width="2" height="2"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="72b5d" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-16777216"/>
+          <font name="Arial" size="17" style="2"/>
+          <foreground color="-14392302"/>
+          <text value="&lt;html&gt;Filogenia é a história evolutiva &lt;br/&gt;&#10;de uma espécie ou de um grupo de espécies&#10;&lt;/html&gt;"/>
+        </properties>
+      </component>
+      <component id="d87d" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="10" height="10"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <hspacer id="f0224">
+        <constraints>
+          <grid row="5" column="5" row-span="2" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="1" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="e90c9" class="javax.swing.JSeparator">
+        <constraints>
+          <grid row="12" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="c98ec" class="javax.swing.JButton" binding="button1" default-binding="true">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="1" fill="0" indent="3" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-2236533"/>
+          <text value="GERAR GRAFO"/>
+        </properties>
+      </component>
+      <component id="564ee" class="javax.swing.JRadioButton" binding="radioButton1" default-binding="true">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="RadioButton"/>
+        </properties>
+      </component>
+      <component id="693c9" class="javax.swing.JRadioButton" binding="radioButton2" default-binding="true">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="RadioButton"/>
+        </properties>
+      </component>
+      <component id="50475" class="javax.swing.JRadioButton" binding="radioButton3" default-binding="true">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="RadioButton"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
